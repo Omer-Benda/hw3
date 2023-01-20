@@ -8,21 +8,21 @@ export default function FCNewIngredients()
   const [nametxt,setNameTxt]=useState('')
   const [imageTxt, setImageTxt] = useState('')
   const [caloriesTxt,setCaloriesTxt]=useState('')
-  const [counter,setCounter]=useState(1)
+  const [counter,setCounter]=useState(2)
     const AddNewIngredient=()=>
     {
       alert(nametxt)
       {setCounter(prevC=>prevC+1)}
       alert (counter)
-      const apiUrl='https://localhost:44338/api/ingredients'
+      const apiUrl='https://localhost:44358/api/ingredients'
       fetch(apiUrl, 
         {
         method: 'POST',
         body: JSON.stringify({
-          Id:counter,
-          Name:nametxt,
-          Image:imageTxt,
-          Calories:caloriesTxt
+          id:counter,
+          name:nametxt,
+          image:imageTxt,
+          calories:caloriesTxt
 
         }
        ),

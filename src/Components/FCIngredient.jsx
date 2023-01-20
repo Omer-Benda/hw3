@@ -4,6 +4,8 @@ export default function FCIngredient(props)
  {
   return (
     <div className='ingredient'>
+      <input type="checkbox" />
+      <br />
         <img src={props.image} style={{width:300, height:250}}></img>
         <p>Name: {props.name}</p>
         <p>Calories: {props.calories}</p>
